@@ -2,7 +2,6 @@
 - name: Checkout clasp externals from repo
   git: repo={{ externals_clasp_repo_url }}
        dest={{ externals_clasp_dir }}
-       force={{ externals_clasp_force_checkout }}
        version={{ externals_clasp_version }}
        recursive=false
 
