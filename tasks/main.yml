@@ -1,0 +1,8 @@
+---
+# tasks file for clasp-externals
+
+- name: Install Distribution-specific Dependencies
+  include: "{{ ansible_distribution }}.yml"
+
+- name: Install Externals-clasp repo
+  include: externals-clasp.yml

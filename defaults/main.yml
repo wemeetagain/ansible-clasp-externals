@@ -1,0 +1,22 @@
+---
+# defaults file for clasp-externals
+
+# where to clone to locally
+externals_clasp_dir: /home/vagrant/externals-clasp
+# git repo url of externals-clasp
+externals_clasp_repo_url: https://github.com/drmeister/externals-clasp
+# branch, commit, tag
+externals_clasp_version: master
+# which make target to invoke
+externals_clasp_target: all
+
+# How many parallel jobs to use for C/++ compilation.
+pjobs: 2
+
+#------- Only change below if you really need to -----
+
+gcc_toolchain: /usr
+# the gcc executable needs to be at $(GCC_TOOLCHAIN)/bin/gcc
+# the g++ executable needs to be at $(GCC_TOOLCHAIN)/bin/g++
+gcc_executable: "{{ gcc_toolchain }}/bin/gcc"
+gxx_executable: "{{ gcc_toolchain }}/bin/g++"

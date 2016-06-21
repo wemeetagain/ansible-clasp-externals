@@ -1,0 +1,15 @@
+---
+- name: Install Dependencies
+  pacman: name={{ item }}
+  become: yes
+  with_items:
+    - base-devel
+    - boost
+    - expat
+    - gmp
+    - git
+    - ncurses
+    - sbcl
+    - readline
+    - zlib
+

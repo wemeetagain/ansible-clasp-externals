@@ -1,0 +1,33 @@
+---
+- name: Install Dependencies
+  apt: name={{ item }}
+       state=present
+       install_recommends=no
+  become: yes
+  with_items:
+    - clang-3.6
+    - libclang-3.6-dev
+    - emacs
+    - git
+    - llvm-3.6
+    - llvm-3.6-dev
+    - libboost-dev
+    - libboost-filesystem-dev
+    - libboost-date-time-dev
+    - libboost-serialization-dev
+    - libboost-iostreams-dev
+    - libboost-program-options-dev
+    - libboost-random-dev
+    - libboost-regex-dev
+    - libboost-system-dev
+    - libgmp-dev
+    - autoconf
+    - automake
+    - libtool
+    - libexpat-dev
+    - libz-dev
+    - libbz2-dev
+    - libncurses-dev
+    - libreadline-dev
+    - libedit-dev
+    - sbcl
