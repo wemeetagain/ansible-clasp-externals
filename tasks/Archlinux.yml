@@ -5,6 +5,7 @@
   with_items:
     - base-devel
     - boost
+    - cmake
     - expat
     - gmp
     - git

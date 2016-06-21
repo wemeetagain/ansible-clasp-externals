@@ -6,6 +6,7 @@
   become: yes
   with_items:
     - clang-3.6
+    - cmake
     - libclang-3.6-dev
     - emacs
     - git
