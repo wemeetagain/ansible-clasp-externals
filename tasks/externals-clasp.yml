@@ -6,9 +6,7 @@
        recursive=false
 
 - name: touch local.config
-  shell: touch local.config
-  args:
-    chdir: "{{ externals_clasp_dir }}"
+  file: path="{{ externals_clasp_dir }}/local.config" state=touch
 
 - name: Make externals-clasp
   shell: "make {{ externals_clasp_target }}"
