@@ -5,7 +5,7 @@
        version={{ externals_clasp_version }}
        recursive=false
 
-- name: touch local.config
+- name: Touch local.config
   file: path="{{ externals_clasp_dir }}/local.config" state=touch
 
 - name: Make externals-clasp
