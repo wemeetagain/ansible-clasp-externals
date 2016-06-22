@@ -32,3 +32,4 @@
     - libreadline-dev
     - libedit-dev
     - sbcl
+    - g++
