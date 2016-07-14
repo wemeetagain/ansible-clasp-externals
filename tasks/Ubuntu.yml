@@ -5,6 +5,7 @@
        install_recommends=no
   become: yes
   with_items:
+    - binutils-dev
     - cmake
     - emacs
     - git
