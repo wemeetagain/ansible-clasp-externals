@@ -5,13 +5,9 @@
        install_recommends=no
   become: yes
   with_items:
-    - clang-3.6
     - cmake
-    - libclang-3.6-dev
     - emacs
     - git
-    - llvm-3.6
-    - llvm-3.6-dev
     - libboost-dev
     - libboost-filesystem-dev
     - libboost-date-time-dev
