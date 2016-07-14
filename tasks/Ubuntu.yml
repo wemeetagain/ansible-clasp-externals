@@ -27,5 +27,6 @@
     - libncurses-dev
     - libreadline-dev
     - libedit-dev
+    - libgc-dev
     - sbcl
     - g++
