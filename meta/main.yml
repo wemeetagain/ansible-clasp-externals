@@ -14,7 +14,7 @@ galaxy_info:
 
 dependencies:
   - role: ajsalminen.apt_source
-    when: '{{ ansible_distribution }}' == 'Ubuntu'
+    when: "ansible_distribution == 'Ubuntu'"
     apt_source_config:
       - source: 'deb http://us.archive.ubuntu.com/ubuntu/ yakkety main restricted'
         packages:
