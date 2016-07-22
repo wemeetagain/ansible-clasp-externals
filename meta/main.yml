@@ -1,21 +1,15 @@
 galaxy_info:
   author: Cayman Nava
   description: Clasp externals are dependencies required for clasp to run
-  
   license: MIT
-  
   platforms:
   - name: Archlinux
     versions:
       - all
   - name: Ubuntu
     versions:
-    - trusty
-    - utopic
-    - vivid
-    - wily
     - xenial
-  
+    - yakkety
   galaxy_tags: []
 
 dependencies: []
