@@ -13,7 +13,7 @@ galaxy_info:
   galaxy_tags: []
 
 dependencies:
-  - role: ajsalminen.apt_source
+  - role: apt_source
     when: "ansible_distribution == 'Ubuntu'"
     become: yes
     apt_source_config:
