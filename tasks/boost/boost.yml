@@ -11,11 +11,6 @@
        version={{ boost_version }}
        force=true
 
-- name: Clean Boost
-  shell: make clean
-  args:
-    chdir: "{{ boost_dir }}"
-
 - name: Bootstrap Boost
   shell: "./bootstrap.sh; bjam headers"
   args:
