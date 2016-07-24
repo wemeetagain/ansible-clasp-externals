@@ -9,6 +9,7 @@
     - expat
     - gmp
     - git
+    - gc
     - ncurses
     - sbcl
     - readline
