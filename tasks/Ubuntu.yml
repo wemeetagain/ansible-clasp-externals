@@ -2,7 +2,6 @@
 - name: Install Dependencies
   apt: name={{ item }}
        state=present
-       install_recommends=no
   become: yes
   with_items:
     - binutils-dev
