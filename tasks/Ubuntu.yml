@@ -8,15 +8,7 @@
     - cmake
     - emacs
     - git
-    - libboost-dev
-    - libboost-filesystem-dev
-    - libboost-date-time-dev
-    - libboost-serialization-dev
-    - libboost-iostreams-dev
-    - libboost-program-options-dev
-    - libboost-random-dev
-    - libboost-regex-dev
-    - libboost-system-dev
+    - libboost1.60-tools-dev
     - libgmp-dev
     - autoconf
     - automake
@@ -30,3 +22,6 @@
     - libgc-dev
     - sbcl
     - g++
+
+- name: Install Boost from source
+  include: boost/boost.yml

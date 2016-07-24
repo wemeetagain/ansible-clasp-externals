@@ -1,0 +1,40 @@
+---
+- name: Ensure build locations exist
+  file: path="{{ externals_clasp_dir }}/build/{{ item }}" state=directory
+  with_items:
+    - debug
+    - release
+
+- name: Checkout Boost from source
+  git: repo={{ boost_repo_url }}
+       dest={{ boost_dir }}
+       version={{ boost_version }}
+       force=true
+
+- name: Clean Boost
+  shell: make clean
+  args:
+    chdir: "{{ boost_dir }}"
+
+- name: Bootstrap Boost
+  shell: "./bootstrap.sh; bjam headers"
+  args:
+    chdir: "{{ boost_dir }}"
+  become: yes
+
+- name: Make Boost
+  shell: "bjam toolset=gcc \
+            --with-filesystem --with-date_time \
+            --with-serialization --with-iostreams	\
+            --with-program_options --with-regex	\
+            --with-system --with-mpi \
+            --prefix={{ externals_clasp_dir }}/build/{{ item }} \
+            link=static {{ item }} \
+            -j{{ pjobs }} \
+            install --ignore-site-config"
+  args:
+    chdir: "{{ boost_dir }}"
+  become: yes
+  with_items:
+    - debug
+    - release
