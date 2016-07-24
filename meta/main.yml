@@ -20,3 +20,4 @@ dependencies:
       - source: 'deb http://us.archive.ubuntu.com/ubuntu/ yakkety main restricted'
         packages:
           - pattern: 'libboost*'
+          - patterm: 'boost-*'
