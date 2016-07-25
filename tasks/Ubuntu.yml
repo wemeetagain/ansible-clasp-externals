@@ -22,6 +22,3 @@
     - libgc-dev
     - sbcl
     - g++
-
-- name: Install Boost from source
-  include: boost/boost.yml

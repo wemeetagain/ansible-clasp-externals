@@ -1,10 +1,4 @@
 ---
-- name: Ensure build locations exist
-  file: path="{{ externals_clasp_dir }}/build/{{ item }}" state=directory
-  with_items:
-    - debug
-    - release
-
 - name: Checkout Boost from source
   git: repo={{ boost_repo_url }}
        dest={{ boost_dir }}
