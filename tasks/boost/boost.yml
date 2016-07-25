@@ -3,7 +3,8 @@
   git: repo={{ boost_repo_url }}
        dest={{ boost_dir }}
        version={{ boost_version }}
-       force=true
+       recursive=yes
+       force=yes
 
 - name: Bootstrap Boost
   shell: "./bootstrap.sh; bjam headers"
