@@ -13,7 +13,7 @@ externals_clasp_target: all
 # boost (only used for Ubuntu)
 boost_dir: "{{ externals_clasp_dir }}/boost"
 boost_repo_url: https://github.com/boostorg/boost
-boost_version: boost-1.61.0
+boost_version: master
 
 # How many parallel jobs to use for C/++ compilation.
 pjobs: 2
