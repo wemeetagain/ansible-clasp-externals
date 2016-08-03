@@ -7,13 +7,13 @@
        force=yes
 
 - name: Bootstrap Boost
-  shell: "./bootstrap.sh; bjam headers"
+  shell: "./bootstrap.sh; ./b2 headers"
   args:
     chdir: "{{ boost_dir }}"
   become: yes
 
 - name: Make Boost
-  shell: "bjam toolset=gcc \
+  shell: "./b2 toolset=gcc \
             --with-filesystem --with-date_time \
             --with-serialization --with-iostreams	\
             --with-program_options --with-regex	\
