@@ -19,6 +19,7 @@
             --with-program_options --with-regex	\
             --with-system --with-mpi \
             --prefix={{ externals_clasp_dir }}/build/{{ item }} \
+            --std=c++11
             link=static {{ item }} \
             -j{{ pjobs }} \
             install --ignore-site-config"
