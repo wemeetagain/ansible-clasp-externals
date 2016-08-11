@@ -4,6 +4,7 @@
        dest={{ externals_clasp_dir }}
        version={{ externals_clasp_version }}
        recursive=false
+  tags: ["clasp-externals-checkout"]
 
 - name: Touch local.config
   file: path="{{ externals_clasp_dir }}/local.config" state=touch
@@ -18,3 +19,4 @@
     - GCC_TOOLCHAIN: "{{ gcc_toolchain }}"
     - GCC_EXECUTABLE: "{{ gcc_executable }}"
     - GXX_EXECUTABLE: "{{ gxx_executable }}"
+  tags: ["clasp-externals-make"]
