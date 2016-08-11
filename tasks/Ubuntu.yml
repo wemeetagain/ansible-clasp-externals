@@ -1,4 +1,12 @@
 ---
+- name: Get Aptitude
+  apt: name=aptitude
+  become: yes
+
+- name: Update package cache
+  apt: update_cache=yes
+  become: yes
+
 - name: Install Dependencies
   apt: name={{ item }}
        state=present
