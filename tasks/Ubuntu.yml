@@ -16,6 +16,15 @@
     - cmake
     - emacs
     - git
+    - libboost-dev
+    - libboost-filesystem-dev
+    - libboost-date-time-dev
+    - libboost-serialization-dev
+    - libboost-iostreams-dev
+    - libboost-program-options-dev
+    - libboost-random-dev
+    - libboost-regex-dev
+    - libboost-system-dev
     - libgmp-dev
     - autoconf
     - automake
