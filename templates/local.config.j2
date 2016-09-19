@@ -1,0 +1,21 @@
+#
+# This defines how many processors you have available to build with
+# More processors = faster build
+#
+export PJOBS = {{ pjobs }}
+
+#
+# What system are you building on?   Linux or Darwin
+# If not defined the makefile will try to use $(shell uname)
+#
+export TARGET_OS = {{ ansible_system }}
+
+#
+# This defines where gcc lives
+# the gcc executable needs to be at $(GCC_TOOLCHAIN)/bin/gcc
+# the g++ executable needs to be at $(GCC_TOOLCHAIN)/bin/g++
+#
+export GCC_TOOLCHAIN = {{ gcc_toolchain }}
+export GCC_EXECUTABLE = {{ gcc_executable }}
+export GXX_EXECUTABLE = { gxx_executable }}
+

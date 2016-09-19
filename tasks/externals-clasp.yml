@@ -6,17 +6,13 @@
        recursive=false
   tags: ["clasp-externals-checkout"]
 
-- name: Touch local.config
-  file: path="{{ externals_clasp_dir }}/local.config" state=touch
+- name: Copy local.config
+  template: src=local.config.j2 dest="{{ externals_clasp_dir }}/local.config"
+  tags:
+    - clasp-externals-config
 
 - name: Make externals-clasp
   shell: "make {{ externals_clasp_target }}"
   args:
     chdir: "{{ externals_clasp_dir }}"
-  environment:
-    - TARGET_OS: "{{ ansible_system }}"
-    - PJOBS: "{{ pjobs }}"
-    - GCC_TOOLCHAIN: "{{ gcc_toolchain }}"
-    - GCC_EXECUTABLE: "{{ gcc_executable }}"
-    - GXX_EXECUTABLE: "{{ gxx_executable }}"
   tags: ["clasp-externals-make"]
