@@ -8,7 +8,6 @@
   become: yes
   with_items:
     - base-devel
-    - boost
     - cmake
     - expat
     - gmp

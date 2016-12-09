@@ -1,4 +1,1 @@
 ---
-- name: Install Boost from source
-  include: boost/boost.yml
-  tags: ["boost-from-src"]

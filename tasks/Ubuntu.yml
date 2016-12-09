@@ -16,7 +16,6 @@
     - cmake
     - emacs
     - git
-    - libboost-all-dev
     - libgmp-dev
     - autoconf
     - automake

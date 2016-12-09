@@ -12,17 +12,4 @@ galaxy_info:
     - yakkety
   galaxy_tags: []
 
-dependencies:
-  - role: debops.apt
-    when: "ansible_distribution == 'Ubuntu'"
-    become: yes
-    apt__mirrors: ['http://us.archive.ubuntu.com/ubuntu/']
-    apt__sources:
-      - releases: ['yakkety']
-        sections: ['main','restricted','universe']
-  - role: debops.apt_preferences
-    when: "ansible_distribution == 'Ubuntu'"
-    become: yes
-    apt_preferences__list:
-      - package: 'libboost*'
-        pin: release n=yakkety
+dependencies: []
